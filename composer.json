@@ -1,0 +1,30 @@
+{
+    "name": "youdot/coding-standard",
+    "description": "The coding standard applying to all Youdot PHP projects",
+    "keywords": [
+        "youdot",
+        "coding",
+        "standard",
+        "cs",
+        "code",
+        "style",
+        "sniffer",
+        "rules",
+        "sniffs",
+        "checks"
+    ],
+    "type": "phpcodesniffer-standard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jérémy Marodon",
+            "email": "marodon.jeremy@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/coding-standard": "^6.0"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

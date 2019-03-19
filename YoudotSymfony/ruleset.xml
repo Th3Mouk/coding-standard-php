@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ruleset name="Youdot Symfony"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
+    <!-- Include full Youdot Coding Standard -->
+    <rule ref="Youdot">
+        <!-- Can't apply this on Symfony -->
+        <exclude name="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
+    </rule>
+</ruleset>
