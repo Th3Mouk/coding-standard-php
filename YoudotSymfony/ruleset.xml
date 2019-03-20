@@ -8,5 +8,6 @@
     <rule ref="Youdot">
         <!-- Can't apply this on Symfony -->
         <exclude name="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
+        <exclude name="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants.DisallowedLateStaticBindingForConstant" />
     </rule>
 </ruleset>
