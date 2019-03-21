@@ -34,6 +34,10 @@
             <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
+         
+    <rule ref="Squiz.Strings.DoubleQuoteUsage">
+        <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
+    </rule>
 
     <rule ref="Squiz.Commenting.FunctionComment">
         <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
