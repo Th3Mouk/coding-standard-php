@@ -21,6 +21,15 @@
     <rule ref="YoudotSymfony"/>
 
     <!-- Directories to be checked -->
-    <file>src</file>
+    <file>Youdot</file>
+    <file>YoudotSymfony</file>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint"/>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint"/>
+    </rule>
 
 </ruleset>
