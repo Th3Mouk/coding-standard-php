@@ -1,0 +1,6 @@
+parameters:
+    level: 7
+    paths: ['Youdot', 'YoudotSymfony']
+    autoload_files:
+        - ./vendor/squizlabs/php_codesniffer/autoload.php
+    bootstrap: ./bootstrap-phpstan.php

@@ -1,0 +1,29 @@
+language: php
+
+php:
+  - 7.4
+  - nightly
+
+env:
+  global:
+    - PATH="$HOME/.composer/vendor/bin:$PATH"
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.4
+      env: COMPOSER_FLAGS="--prefer-lowest"
+  allow_failures:
+    - php: nightly
+
+install:
+  - composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
+
+script:
+  - vendor/bin/phpstan analyse
+  - vendor/bin/phpcs
+  - vendor/bin/phpunit

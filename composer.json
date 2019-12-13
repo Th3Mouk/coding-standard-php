@@ -22,9 +22,24 @@
         }
     ],
     "require": {
-        "doctrine/coding-standard": "^6.0"
+        "doctrine/coding-standard": "^7.0",
+        "phpstan/phpdoc-parser": "^0.4.1"
     },
     "config": {
         "sort-packages": true
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.2",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Youdot\\": "Youdot"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Youdot\\": "tests/Youdot"
+        }
     }
 }
