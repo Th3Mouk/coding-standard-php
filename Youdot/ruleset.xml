@@ -28,19 +28,25 @@
             <property name="allowFullyQualifiedGlobalFunctions" value="true"/>
         </properties>
     </rule>
-
+    
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
             <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
-         
+
     <rule ref="Squiz.Strings.DoubleQuoteUsage">
-        <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
+        <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
     </rule>
 
     <rule ref="Squiz.Commenting.FunctionComment">
         <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
         <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
+    </rule>
+
+    <rule ref="Squiz.NamingConventions.ValidVariableName">
+        <exclude name="Squiz.NamingConventions.ValidVariableName.NotCamelCaps"/>
+        <exclude name="Squiz.NamingConventions.ValidVariableName.StringNotCamelCaps"/>
+        <exclude name="Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps"/>
     </rule>
 </ruleset>
