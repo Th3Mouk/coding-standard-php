@@ -32,4 +32,20 @@
         <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint"/>
     </rule>
 
+    <rule ref="ObjectCalisthenics.Files.ClassTraitAndInterfaceLength.ObjectCalisthenics\Sniffs\Files\ClassTraitAndInterfaceLengthSniff">
+        <exclude-pattern>Youdot/Sniffs/NamingConventions/ValidVariableNameSniff.php</exclude-pattern>
+    </rule>
+
+    <rule ref="ObjectCalisthenics.Metrics.MaxNestingLevel.ObjectCalisthenics\Sniffs\Metrics\MaxNestingLevelSniff">
+        <exclude-pattern>Youdot/Sniffs/NamingConventions/ValidVariableNameSniff.php</exclude-pattern>
+    </rule>
+
+    <rule ref="ObjectCalisthenics.Files.FunctionLength.ObjectCalisthenics\Sniffs\Files\FunctionLengthSniff">
+        <exclude-pattern>Youdot/Sniffs/NamingConventions/ValidVariableNameSniff.php</exclude-pattern>
+    </rule>
+
+    <rule ref="ObjectCalisthenics.ControlStructures.NoElse.ObjectCalisthenics\Sniffs\ControlStructures\NoElseSniff">
+        <exclude-pattern>Youdot/Sniffs/NamingConventions/ValidVariableNameSniff.php</exclude-pattern>
+    </rule>
+
 </ruleset>

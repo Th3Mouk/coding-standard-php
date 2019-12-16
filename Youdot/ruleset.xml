@@ -21,6 +21,20 @@
         </properties>
     </rule>
 
+    <rule ref="ObjectCalisthenics">
+        <exclude name="ObjectCalisthenics.CodeAnalysis.OneObjectOperatorPerLine"/>
+        <exclude name="ObjectCalisthenics.Files.ClassTraitAndInterfaceLength"/>
+        <exclude name="ObjectCalisthenics.Files.FunctionLength"/>
+        <exclude name="ObjectCalisthenics.Metrics.PropertyPerClassLimit"/>
+        <exclude name="ObjectCalisthenics.Metrics.MethodPerClassLimit"/>
+    </rule>
+
+    <rule ref="ObjectCalisthenics.Files.FunctionLength">
+        <properties>
+            <property name="maxLength" value="40"/>
+        </properties>
+    </rule>
+
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
         <properties>
             <property name="allowFullyQualifiedGlobalClasses" value="true"/>
@@ -28,7 +42,7 @@
             <property name="allowFullyQualifiedGlobalFunctions" value="true"/>
         </properties>
     </rule>
-    
+
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
             <property name="spacesCountBeforeColon" value="0"/>

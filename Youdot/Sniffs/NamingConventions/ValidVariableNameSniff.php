@@ -228,7 +228,7 @@ class ValidVariableNameSniff extends AbstractVariableSniff
     {
         return preg_replace_callback(
             '/([A-Z])/',
-            static fn($c) => '_' . strtolower($c[1]),
+            static fn($character) => '_' . strtolower($character[1]),
             $str
         );
     }
