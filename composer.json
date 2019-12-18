@@ -1,12 +1,13 @@
 {
     "name": "youdot/coding-standard",
-    "description": "The coding standard applying to all Youdot PHP projects",
+    "description": "The coding standard applying to all Youdot PHP projects, based on Doctrine set of PHPCS rules, with additional checks.",
     "keywords": [
         "youdot",
-        "coding",
-        "standard",
+        "coding-standard",
+        "standards",
+        "phpcbf",
+        "phpcs",
         "cs",
-        "code",
         "style",
         "sniffer",
         "rules",
@@ -26,12 +27,12 @@
         "phpstan/phpdoc-parser": "^0.4.1",
         "object-calisthenics/phpcs-calisthenics-rules": "^3.7"
     },
-    "config": {
-        "sort-packages": true
-    },
     "require-dev": {
         "phpstan/phpstan": "^0.12.2",
         "phpunit/phpunit": "^8.5"
+    },
+    "config": {
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
