@@ -8,6 +8,8 @@
     <rule ref="Youdot">
         <!-- Can't apply this on Symfony -->
         <exclude name="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
-        <exclude name="Youdot.NamingConventions.ValidVariableName" />
+        <exclude name="Youdot.NamingConventions.ValidVariableName"/>
     </rule>
+
+    <rule ref="Squiz.NamingConventions.ValidVariableName"/>
 </ruleset>
