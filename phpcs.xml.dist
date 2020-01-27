@@ -17,12 +17,9 @@
 
     <!-- Include full Youdot Coding Standard -->
     <rule ref="Youdot"/>
-    <!-- Or include full Youdot Coding Standard for Symfony-->
-    <rule ref="YoudotSymfony"/>
 
     <!-- Directories to be checked -->
-    <file>Youdot</file>
-    <file>YoudotSymfony</file>
+    <file>Youdot/Sniffs</file>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint"/>
