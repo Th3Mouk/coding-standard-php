@@ -227,8 +227,8 @@ class ValidVariableNameSniff extends AbstractVariableSniff
     private function toSnakeCase(string $str): string
     {
         return preg_replace_callback(
-            '/([A-Z])/',
-            static fn($character) => '_' . strtolower($character[1]),
+            '/[A-Z]+/',
+            static fn($character) => '_' . strtolower(current($character)),
             $str
         );
     }

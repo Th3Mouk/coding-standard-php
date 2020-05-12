@@ -34,4 +34,26 @@ final class ValidVariableNameSniffTest extends TestCase
 
         self::assertAllFixedInFile($report);
     }
+
+    public function testErrorsOnTypedVariables(): void
+    {
+        $report = self::checkFile(__DIR__ . '/data/wrongTypedVariableName.php');
+
+        self::assertSame(12, $report->getErrorCount());
+
+        self::assertSniffError($report, 4, 'MemberNotSnakeCase', "Member variable \"totoMachin\" is not in valid snake case format");
+        self::assertSniffError($report, 5, 'MemberNotSnakeCase', "Member variable \"totoMachinTruc\" is not in valid snake case format");
+        self::assertSniffError($report, 6, 'MemberNotSnakeCase', "Member variable \"biduleUUID\" is not in valid snake case format");
+        self::assertSniffError($report, 8, 'NotSnakeCase', "Variable \"fooBar\" is not in valid snake case format");
+        self::assertSniffError($report, 10, 'NotSnakeCase', "Variable \"totoMachin\" is not in valid snake case format");
+        self::assertSniffError($report, 10, 'NotSnakeCase', "Variable \"fooBar\" is not in valid snake case format");
+        self::assertSniffError($report, 11, 'NotSnakeCase', "Variable \"totoMachinTruc\" is not in valid snake case format");
+        self::assertSniffError($report, 11, 'NotSnakeCase', "Variable \"fooBar\" is not in valid snake case format");
+        self::assertSniffError($report, 12, 'NotSnakeCase', "Variable \"biduleUUID\" is not in valid snake case format");
+        self::assertSniffError($report, 12, 'NotSnakeCase', "Variable \"fooBar\" is not in valid snake case format");
+        self::assertSniffError($report, 15, 'NotSnakeCase', "Variable \"fooBar\" is not in valid snake case format");
+        self::assertSniffError($report, 16, 'StringNotSnakeCase', "Variable \"fooBar\" is not in valid snake case format");
+
+        self::assertAllFixedInFile($report);
+    }
 }
