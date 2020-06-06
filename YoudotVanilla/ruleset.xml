@@ -6,13 +6,13 @@
 
     <!-- Include full Doctrine Coding Standard -->
     <rule ref="Doctrine">
-        <exclude name="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming"/>
-        <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
-        <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming"/>
         <exclude name="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
-        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFallbackGlobalName"/>
         <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
+    </rule>
+
+    <rule ref="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned">
+        <severity>5</severity>
     </rule>
 
     <rule ref="Generic.Formatting.SpaceAfterNot">
@@ -20,32 +20,29 @@
             <property name="spacing" value="0" />
         </properties>
     </rule>
-
-    <rule ref="ObjectCalisthenics">
-        <exclude name="ObjectCalisthenics.CodeAnalysis.OneObjectOperatorPerLine"/>
-        <exclude name="ObjectCalisthenics.Files.ClassTraitAndInterfaceLength"/>
-        <exclude name="ObjectCalisthenics.Files.FunctionLength"/>
-        <exclude name="ObjectCalisthenics.Metrics.PropertyPerClassLimit"/>
-        <exclude name="ObjectCalisthenics.Metrics.MethodPerClassLimit"/>
+    
+    <rule ref="ObjectCalisthenics.Metrics.MaxNestingLevel">
+        <properties>
+            <property name="maxNestingLevel" value="2"/>
+        </properties>
     </rule>
 
-    <rule ref="ObjectCalisthenics.Files.FunctionLength">
+    <rule ref="ObjectCalisthenics.ControlStructures.NoElse"/>
+
+    <rule ref="ObjectCalisthenics.NamingConventions.ElementNameMinimalLength">
         <properties>
-            <property name="maxLength" value="40"/>
+            <property name="minLength" value="3"/>
+            <property name="allowedShortNames" type="array" value="i,id,to,up"/>
         </properties>
     </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
         <properties>
+            <property name="allowFallbackGlobalConstants" value="true"/>
+            <property name="allowFallbackGlobalFunctions" value="true"/>
             <property name="allowFullyQualifiedGlobalClasses" value="true"/>
             <property name="allowFullyQualifiedGlobalConstants" value="true"/>
             <property name="allowFullyQualifiedGlobalFunctions" value="true"/>
-        </properties>
-    </rule>
-
-    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
-        <properties>
-            <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
 

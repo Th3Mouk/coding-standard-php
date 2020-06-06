@@ -56,9 +56,9 @@ class ValidVariableNameSniff extends AbstractVariableSniff
                             $phpcs_file->fixer->replaceToken($var, $this->toSnakeCase($original_var_name));
                         }
                     }
-                }//end if
-            }//end if
-        }//end if
+                }
+            }
+        }
 
         $original_var_name = $var_name;
         // There is no way for us to know if the var is public or private,
@@ -93,7 +93,7 @@ class ValidVariableNameSniff extends AbstractVariableSniff
         }
 
         $phpcs_file->fixer->replaceToken($stack_ptr, '$' . $this->toSnakeCase($var_name));
-    }//end processVariable()
+    }
 
     /**
      * Processes class member variables.
@@ -157,7 +157,7 @@ class ValidVariableNameSniff extends AbstractVariableSniff
         }
 
         $phpcs_file->fixer->replaceToken($stack_ptr, '$' . $this->toSnakeCase($var_name));
-    }//end processMemberVar()
+    }
 
     /**
      * Processes the variable found within a double quoted string.
@@ -197,12 +197,12 @@ class ValidVariableNameSniff extends AbstractVariableSniff
 
             $complete_string = preg_replace_callback(
                 "/\\\$$var_name/",
-                fn($matches) => $this->toSnakeCase($matches[0]),
+                fn ($matches) => $this->toSnakeCase($matches[0]),
                 $tokens[$stack_ptr]['content']
             );
             $phpcs_file->fixer->replaceToken($stack_ptr, $complete_string);
         }
-    }//end processVariableInString()
+    }
 
     private function isSnakeCaseFormat(string $string): bool
     {
@@ -228,8 +228,8 @@ class ValidVariableNameSniff extends AbstractVariableSniff
     {
         return preg_replace_callback(
             '/[A-Z]+/',
-            static fn($character) => '_' . strtolower(current($character)),
+            static fn ($character) => '_' . strtolower(current($character)),
             $str
         );
     }
-}//end class
+}
