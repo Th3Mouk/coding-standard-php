@@ -26,7 +26,7 @@ class ModifierLetterApostropheSniff implements Sniff
             T_DOC_COMMENT_STRING,
             T_CONSTANT_ENCAPSED_STRING,
         ];
-    }//end register()
+    }
 
     /**
      * Processes this test, when one of its tokens is encountered.
@@ -48,11 +48,15 @@ class ModifierLetterApostropheSniff implements Sniff
         if (!empty($matches)) {
             $phpcs_file->addFixableError($current_token_content, $stack_ptr, 'IncorrectApostrophe');
 
-            $new_content = preg_replace("|([a-z]+)[\\\]?[\x{0027}\x{2019}\x{FF07}]([a-z]+)|u", "$1\u{02BC}$2", $current_token_content);
+            $new_content = preg_replace(
+                "|([a-z]+)[\\\]?[\x{0027}\x{2019}\x{FF07}]([a-z]+)|u",
+                "$1\u{02BC}$2",
+                $current_token_content
+            );
 
             $phpcs_file->fixer->replaceToken($stack_ptr, $new_content);
         }
 
         return;
-    }//end process()
-}//end class
+    }
+}
