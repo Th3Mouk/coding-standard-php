@@ -26,6 +26,7 @@ composer require youdot/coding-standard --dev
 
  - SnakeCase Variable
  - Modifier Letter Apostrophe Character
+ - Immutable classes through [Psalm](https://psalm.dev/)
 
 To disable them:
 
@@ -34,4 +35,9 @@ To disable them:
     <exclude name="Youdot.NamingConventions.ValidVariableName"/>
     <exclude name="Youdot.Strings.ModifierLetterApostrophe"/>
 </rule>
+```
+
+If you're using Psalm you can enable
+```xml
+<rule ref="Youdot.Classes.PsalmImmutable"/>
 ```
