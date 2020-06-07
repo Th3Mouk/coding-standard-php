@@ -29,11 +29,11 @@
         <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint"/>
     </rule>
 
-    <rule ref="ObjectCalisthenics.Metrics.MaxNestingLevel.ObjectCalisthenics\Sniffs\Metrics\MaxNestingLevelSniff">
+    <rule ref="ObjectCalisthenics.Metrics.MaxNestingLevel">
         <exclude-pattern>Youdot/Sniffs/NamingConventions/ValidVariableNameSniff.php</exclude-pattern>
     </rule>
 
-    <rule ref="ObjectCalisthenics.ControlStructures.NoElse.ObjectCalisthenics\Sniffs\ControlStructures\NoElseSniff">
+    <rule ref="ObjectCalisthenics.ControlStructures.NoElse">
         <exclude-pattern>Youdot/Sniffs/NamingConventions/ValidVariableNameSniff.php</exclude-pattern>
     </rule>
 
