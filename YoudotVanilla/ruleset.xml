@@ -20,7 +20,7 @@
             <property name="spacing" value="0" />
         </properties>
     </rule>
-    
+
     <rule ref="ObjectCalisthenics.Metrics.MaxNestingLevel">
         <properties>
             <property name="maxNestingLevel" value="2"/>
@@ -35,7 +35,7 @@
             <property name="allowedShortNames" type="array" value="i,id,to,up"/>
         </properties>
     </rule>
-
+    
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
         <properties>
             <property name="allowFallbackGlobalConstants" value="true"/>

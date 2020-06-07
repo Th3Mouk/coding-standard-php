@@ -37,4 +37,8 @@
         <exclude-pattern>Youdot/Sniffs/NamingConventions/ValidVariableNameSniff.php</exclude-pattern>
     </rule>
 
+    <rule ref="Youdot.Classes.PsalmImmutable.MissingTag">
+        <exclude-pattern>Sniff.php</exclude-pattern>
+    </rule>
+
 </ruleset>
