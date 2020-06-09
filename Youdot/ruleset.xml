@@ -10,6 +10,4 @@
 
     <rule ref="ObjectCalisthenics.NamingConventions.NoSetter"/>
 
-    <rule ref="Youdot.NamingConventions.ValidVariableName"/>
-
 </ruleset>
