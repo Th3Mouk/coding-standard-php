@@ -28,8 +28,8 @@
         "object-calisthenics/phpcs-calisthenics-rules": "^3.7"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.12.25",
-        "phpunit/phpunit": "^9.2"
+        "phpstan/phpstan": "^0.12.27",
+        "phpunit/phpunit": "^9.2.2"
     },
     "config": {
         "sort-packages": true
