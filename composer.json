@@ -36,12 +36,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Youdot\\": "Youdot"
+            "Youdot\\": "Youdot",
+            "YoudotAdditional\\": "YoudotAdditional"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Youdot\\": "tests/Youdot"
+            "Youdot\\": "tests/Youdot",
+            "YoudotAdditional\\": "tests/YoudotAdditional"
         }
     }
 }

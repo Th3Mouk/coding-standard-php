@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Youdot\Sniffs\Classes;
+namespace YoudotAdditional\Sniffs\Classes;
 
 use SlevomatCodingStandard\Sniffs\TestCase;
 

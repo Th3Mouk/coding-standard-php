@@ -39,5 +39,5 @@ To disable them:
 
 If you're using Psalm you can enable
 ```xml
-<rule ref="Youdot.Classes.PsalmImmutable"/>
+<rule ref="YoudotAdditional.Classes.PsalmImmutable"/>
 ```
