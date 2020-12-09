@@ -8,6 +8,4 @@
         <exclude name="Squiz.NamingConventions.ValidVariableName"/>
     </rule>
 
-    <rule ref="ObjectCalisthenics.NamingConventions.NoSetter"/>
-
 </ruleset>
